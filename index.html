@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conviértete en Revendedor de Nuestras Cookies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo para la fuente principal */
+        body {
+            font-family: 'Inter', sans-serif; /* Fuente base */
+            background-color: #ffffff; /* Fondo blanco */
+            background-image:
+                radial-gradient(circle at 15px 15px, rgba(160, 82, 45, 0.04) 5px, transparent 6px),
+                radial-gradient(circle at 45px 45px, rgba(139, 69, 19, 0.03) 6px, transparent 7px);
+            background-size: 60px 60px;
+        }
+        /* Títulos con fuente divertida y color Fucsia */
+        h1, h2, h3, .font-fun {
+            font-family: 'Fredoka One', cursive;
+            color: #c026d3; /* Tailwind fuchsia-600 */
+        }
+        /* Botón principal (Fucsia) */
+        .btn-fun {
+            @apply bg-fuchsia-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 ease-in-out hover:scale-105 hover:bg-fuchsia-700;
+        }
+        /* Botones de navegación (Cian) */
+        .nav-btn {
+             @apply bg-cyan-300 text-black font-semibold py-2 px-4 rounded-full shadow-md transform transition duration-300 ease-in-out hover:scale-105 hover:bg-cyan-400 text-sm md:text-base cursor-pointer; /* Añadido cursor-pointer */
+        }
+        /* Estilo para el botón de navegación activo */
+        .nav-btn.active {
+            @apply bg-cyan-500 font-bold ring-2 ring-cyan-700;
+        }
+        /* Estilo específico para el botón fucsia activo */
+        .nav-btn.bg-fuchsia-600.active {
+             @apply bg-fuchsia-700 ring-2 ring-fuchsia-800;
+        }
+
+        /* Estilo para tarjetas (Fondo blanco) */
+        .card {
+             @apply bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300;
+        }
+        /* Estilo para secciones de información (Fondo Cian claro) */
+        .info-section {
+            @apply bg-cyan-100 rounded-lg shadow-lg p-6 md:p-10 mb-12 md:mb-16;
+        }
+        /* Títulos de sección */
+        .info-section h2 {
+             @apply text-3xl md:text-4xl text-center mb-8;
+        }
+         /* Subtítulos de sección */
+         .info-section h3 {
+             @apply text-xl md:text-2xl mt-6 mb-4;
+         }
+        /* Texto general y listas */
+        .info-section ul, .info-section ol, .info-section p, .info-section label {
+            @apply text-gray-800;
+        }
+        .info-section li::marker {
+            @apply font-bold text-fuchsia-700;
+        }
+        .info-section strong {
+             @apply font-bold text-fuchsia-700;
+        }
+        /* Ajustes específicos */
+         #por-que-revender h2 {
+             color: #c026d3;
+         }
+         .header-subtitle {
+            @apply text-fuchsia-600 font-bold mb-6 inline-block px-6 py-2 rounded-md shadow-md;
+            background-color: rgba(224, 242, 254, 0.8);
+         }
+        /* Clase para ocultar/mostrar secciones */
+        .content-section {
+            display: none; /* Oculto por defecto */
+            padding-top: 1.5rem; /* Espacio para la barra de navegación sticky */
+        }
+        .content-section.active-section {
+            display: block; /* Mostrar sección activa */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 md:py-16 relative z-0">
+
+        <header class="text-center mb-12 md:mb-16">
+            <img src="https://placehold.co/150x150/a855f7/ffffff?text=Logo" alt="Logo Cookies Deliciosas" class="mx-auto mb-6 h-24 w-auto rounded-full shadow-md bg-fuchsia-200">
+            <h1 class="text-4xl md:text-6xl mb-4">MEDALAGANA</h1>
+            <p class="text-xl md:text-2xl header-subtitle">Conviértete en Revendedor de Nuestras Cookies</p>
+        </header>
+
+        <nav class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-20 px-4 sticky top-2 z-10 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow">
+            <a href="#por-que-revender" class="nav-btn font-fun">¿Por Qué Revender?</a>
+            <a href="#operativa-ventas" class="nav-btn font-fun">Operativa</a>
+            <a href="#app-ventas" class="nav-btn font-fun">App Ventas</a>
+            <a href="#comisiones-pagos" class="nav-btn font-fun">Comisiones</a>
+            <a href="#formulario" class="nav-btn font-fun bg-fuchsia-600 text-white hover:bg-fuchsia-700">¡Quiero Revender!</a>
+        </nav>
+
+        <div id="section-container">
+            <section id="por-que-revender" class="mb-12 md:mb-20 content-section">
+                <h2 class="text-3xl md:text-4xl text-center mb-8">¿Por Qué Revender Nuestras Cookies?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card text-center">
+                        <img src="https://placehold.co/80x80/f59e0b/ffffff?text=💰" alt="Icono Dinero" class="mx-auto mb-4 h-16 w-16">
+                        <h3 class="text-xl mb-2">Excelentes Márgenes</h3>
+                        <p class="text-gray-700">Obtén ganancias atractivas con un producto delicioso y de alta demanda.</p>
+                    </div>
+                    <div class="card text-center">
+                         <img src="https://placehold.co/80x80/10b981/ffffff?text=🍪" alt="Icono Cookie" class="mx-auto mb-4 h-16 w-16">
+                        <h3 class="text-xl mb-2">Producto Irresistible</h3>
+                        <p class="text-gray-700">Nuestras cookies son famosas por su sabor único y calidad premium. ¡Se venden solas!</p>
+                    </div>
+                    <div class="card text-center">
+                         <img src="https://placehold.co/80x80/3b82f6/ffffff?text=🤝" alt="Icono Apoyo" class="mx-auto mb-4 h-16 w-16">
+                        <h3 class="text-xl mb-2">MERCADERIA, MATERIALES Y SOPORTE</h3>
+                        <p class="text-gray-700">Te brindamos mercadería inicial, material POP, app de ventas y soporte continuo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="operativa-ventas" class="info-section content-section">
+                <h2>Operativa de Ventas Detallada</h2>
+                <h3>Inicio y Preparación</h3>
+                <ul class="list-disc">
+                    <li>Recibirás <strong>mercadería inicial y material POP</strong> (Punto de Venta) para comenzar.</li>
+                    <li>Entrega inicial en <strong>consignación</strong>: Packs de 30 unidades y 2 exhibidores por colegio o club asignado.</li>
+                    <li>Debes generar una <strong>lista de posibles clientes</strong> (colegios, clubes en tu zona), ordenados geográficamente para optimizar la distribución.</li>
+                </ul>
+                <h3>Captación y Registro de Clientes</h3>
+                <ul class="list-disc">
+                     <li>Visita los colegios y clubes de tu lista para <strong>entregar la consignación</strong> inicial.</li>
+                    <li>Consigue el <strong>contacto de la persona a cargo</strong> del kiosco o cantina (comercio).</li>
+                    <li>Envíanos la información de contacto. Nosotros los <strong>registraremos como tus clientes</strong> en el sistema.</li>
+                </ul>
+                <h3>Toma de Pedidos</h3>
+                <ul class="list-disc">
+                    <li>Semanalmente, enviaremos un mensaje por <strong>lista de difusión de WhatsApp</strong> a tus clientes para recordarles hacer el pedido y comunicar novedades.</li>
+                    <li>Los pedidos que realicen tus clientes te llegarán <strong>automáticamente por WhatsApp</strong> a través de nuestra <strong>App de Ventas Multiagente</strong> (Kyte).</li>
+                    <li>Tu rol es <strong>atender y responder consultas</strong> de tus clientes. Tendrás mensajes preestablecidos para agilizar respuestas.</li>
+                </ul>
+                <h3>Preparación de Pedidos</h3>
+                <ol class="list-decimal">
+                    <li>Reúne los pedidos recibidos por WhatsApp.</li>
+                    <li>Ordénalos según la <strong>ruta de reparto</strong> más eficiente.</li>
+                    <li>Carga cada pedido en la <strong>App Kyte</strong> (ver sección App) en el mismo orden del reparto.</li>
+                    <li>Prepara los pedidos en <strong>bolsas (máx. 30 cookies por bolsa)</strong>.</li>
+                    <li>Rotula cada bolsa con las <strong>etiquetas provistas</strong>, indicando: Nombre del comercio, N° de bolsa (ej. 1/3, 2/3, 3/3) y cantidad total de unidades del pedido.</li>
+                    <li>Coloca las bolsas ordenadas en los <strong>cajones de reparto provistos</strong>, siguiendo el orden de la ruta para facilitar la descarga.</li>
+                    <li><strong>Verifica</strong> que la cantidad total de pedidos preparados coincida con los mensajes de WhatsApp recibidos.</li>
+                </ol>
+                <h3>Entrega y Cobranza</h3>
+                <ul class="list-disc">
+                    <li>Durante la entrega, <strong>envía el remito</strong> (desde la App Kyte) al cliente.</li>
+                    <li>La mercadería se entrega para ser cobrada <strong>contraboleta</strong>.</li>
+                    <li><strong>Plazo de Pago Contaboleta:</strong> Máximo 2 semanas.
+                        <ul>
+                            <li>Si un cliente tiene un pago pendiente de la semana 1 y no pide en la semana 2, no se reclama aún.</li>
+                            <li>Si NO pide tampoco en la semana 3 (2 semanas sin pedir), se le <strong>reclama la cobranza pendiente el día de reparto</strong> de esa semana 3, exigiendo el pago vía depósito/transferencia únicamente.</li>
+                        </ul>
+                    </li>
+                     <li>Si realizas una cobranza en el momento de la entrega, <strong>registra el pago en la App Kyte</strong>, envía el recibo y factura (si es necesario) y finaliza la venta en la app.</li>
+                </ul>
+            </section>
+
+            <section id="app-ventas" class="info-section content-section">
+                 <h2>App de Ventas (Kyte)</h2>
+                 <div class="text-center mb-6">
+                     <img src="https://placehold.co/80x80/3b82f6/ffffff?text=App" alt="Logo Kyte App" class="mx-auto h-20 w-20 rounded-lg shadow">
+                     <p class="mt-4">Utilizamos la app Kyte para gestionar pedidos, entregas y pagos.</p>
+                     <a href="https://play.google.com/store/apps/details?id=com.kyte" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 bg-blue-600 text-white font-bold py-2 px-5 rounded-lg shadow hover:bg-blue-700 transition duration-300">
+                         Descargar Kyte (Android)
+                     </a>
+                     <p class="mt-2 text-sm">Te proporcionaremos los datos de acceso.</p>
+                 </div>
+                <h3>Pasos para Registrar una Venta (Toma de Pedido en la App)</h3>
+                 <ol class="list-decimal">
+                     <li>Asegúrate de estar en la <strong>lista de precios correcta</strong> dentro de la app.</li>
+                     <li>En el menú principal, selecciona <strong>"Vender"</strong>.</li>
+                     <li>Selecciona el <strong>Cliente</strong>.</li>
+                     <li>Ingresa la <strong>Cantidad</strong>.</li>
+                     <li>Selecciona el <strong>Producto</strong>. Repite para todos los productos del pedido.</li>
+                     <li>Toca el botón verde <strong>"Carrito"</strong> (abajo).</li>
+                     <li>Revisa el pedido en el carrito. Añade <strong>observaciones</strong> si es necesario.</li>
+                     <li>Toca nuevamente el botón verde inferior y selecciona <strong>"Guardar Pedido"</strong> para finalizar.</li>
+                 </ol>
+                <h3>Pasos Durante la Entrega</h3>
+                 <ol class="list-decimal">
+                     <li>Ve a la sección <strong>"Pedidos"</strong> en el menú.</li>
+                     <li>Busca y selecciona el pedido del cliente.</li>
+                     <li>Toca el menú <strong>(...)</strong> abajo a la izquierda y selecciona <strong>"Compartir"</strong>.</li>
+                     <li>Vuelve a seleccionar <strong>"Compartir"</strong>, elige WhatsApp, busca al cliente y <strong>envía el Remito</strong>.</li>
+                     <li>Regresa a la app. Desliza la barra inferior para <strong>confirmar la entrega</strong> del pedido.</li>
+                     <li><strong>(Si cobras en el momento):</strong> Registra el pago, finaliza la venta y envía el recibo/factura desde la app.</li>
+                     <li>Toca la flecha atrás (arriba izquierda) para salir del pedido.</li>
+                 </ol>
+            </section>
+
+            <section id="comisiones-pagos" class="info-section content-section">
+                <h2>Comisiones y Pagos</h2>
+                <h3>Tu Comisión Individual</h3>
+                <ul class="list-disc">
+                    <li>Ganas el <strong>10% sobre el total de tus ventas propias cobradas</strong>.</li>
+                    <li>El cálculo se basa en el <strong>monto total recaudado</strong> en las cobranzas que realizaste entre el viernes de una semana y el jueves de la siguiente, inclusive.</li>
+                    <li>Los pagos de tus comisiones se realizan <strong>semanalmente</strong>.</li>
+                    <li>Deberás proporcionar el <strong>Alias/CVU</strong> (indicado como "Alias de Naty" en la info original, verificar si es tu alias o el de Natalia) para recibir las transferencias.</li>
+                </ul>
+                 <h3>Comisiones Pasivas (Equipo Natalia)</h3>
+                 <p class="mb-4">Si formas parte del equipo de Natalia, existen comisiones adicionales basadas en el rendimiento del equipo.</p>
+                 <ul class="list-disc mt-4">
+                    <li>Estas comisiones pasivas se cierran a <strong>fin de mes</strong>.</li>
+                    <li>El monto total de comisión pasiva del mes se descuenta (a Natalia) de las transferencias que recibe durante las <strong>dos primeras semanas del mes siguiente</strong>, en partes iguales.</li>
+                    <li><strong>Natalia se encarga de pagar la comisión correspondiente a sus vendedores</strong> semanalmente, siguiendo la misma lógica de calcularla sobre las cobranzas realizadas por cada vendedor en la semana (Viernes a Jueves).</li>
+                 </ul>
+            </section>
+
+            <section id="formulario" class="info-section content-section">
+                <h2>¡Quiero Ser Revendedor!</h2>
+                <p class="text-center mb-6">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+                <form action="#" method="POST" class="max-w-lg mx-auto">
+                     <div class="mb-4">
+                        <label for="nombre" class="block font-bold mb-2">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block font-bold mb-2">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="telefono" class="block font-bold mb-2">Teléfono / WhatsApp:</label>
+                        <input type="tel" id="telefono" name="telefono" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500">
+                    </div>
+                    <div class="mb-6">
+                        <label for="mensaje" class="block font-bold mb-2">¿Por qué quieres revender nuestras cookies? ¿Tienes experiencia previa? (Opcional)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-fuchsia-500"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-fun font-fun text-xl">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </section>
+        </div> </div>
+
+    <footer class="text-center py-6 mt-12 bg-gray-800">
+        <p class="text-white">© <span id="year"></span> Tu Marca de Cookies. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Script simple para actualizar el año en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Script para mostrar/ocultar secciones
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const contentSections = document.querySelectorAll('.content-section'); // Selecciona por la nueva clase
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    // No prevenir default si es un enlace externo (como el de la app)
+                    // Pero en este caso, todos son internos #links
+                    event.preventDefault(); // Prevenir el comportamiento de ancla
+
+                    const targetId = button.getAttribute('href'); // Obtener el href ej: '#operativa-ventas'
+                    const targetSection = document.querySelector(targetId); // Encontrar la sección
+
+                    // Quitar clase activa de todos los botones
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    // Añadir clase activa al botón clickeado
+                    button.classList.add('active');
+
+                    // Ocultar todas las secciones
+                    contentSections.forEach(section => {
+                        section.classList.remove('active-section');
+                    });
+
+                    // Mostrar la sección objetivo
+                    if (targetSection) {
+                        targetSection.classList.add('active-section');
+                    }
+                });
+            });
+
+            // Opcional: Mostrar la primera sección por defecto al cargar la página
+            // const firstSection = document.querySelector('#por-que-revender');
+            // const firstButton = document.querySelector('a[href="#por-que-revender"]');
+            // if(firstSection && firstButton) {
+            //     firstSection.classList.add('active-section');
+            //     firstButton.classList.add('active');
+            // }
+            // Si no se descomenta lo anterior, ninguna sección se muestra al inicio.
+        });
+    </script>
+
+</body>
+</html>
